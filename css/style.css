@@ -66,9 +66,9 @@ input {
 .grid {
   display: grid;
   grid-template-areas: 
-  "my-header my-header"
-  "my-aside my-main"
-  "my-aside my-main";
+  "my-header my-header my-header"
+  "my-aside my-main my-main"
+  "my-aside my-main my-main";
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 8rem 0;
 }
@@ -86,6 +86,8 @@ input {
 
 .header__logo {
   font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 1.17;
   margin-right: 7rem;
 }
 
@@ -95,6 +97,8 @@ input {
 
 .header__nav a {
   font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.17;
 }
 
 .header__nav a:not(:last-child) {
@@ -119,6 +123,7 @@ input {
   padding-left: 1rem;
   padding-right: 4rem;
   font-size: 2rem;
+  line-height: 1.15;
   color: #fff;
 }
 
@@ -134,16 +139,75 @@ input {
 
 .header__hour {
   font-size: 2rem;
+  line-height: 1.15;
 }
 
 .header__days {
   font-size: 1.2rem;
+  line-height: 1.17;
 }
 
 .header__personal {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+}
+
+.main-display__trailer {
+  position: relative;
+  width: 98%;
+  height: 20.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('../img/back-trailer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.6rem;
+  padding: 1.9rem;
+}
+
+.main-display__views {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.19;
+}
+
+.main-display__header {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.17;
+}
+
+.main-display__date {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.14;
+}
+
+.button-play__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.07);
+  width: 8.1rem;
+  height: 8.1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-play {
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent;
+  border-left: 2.5rem solid #fff;
+  border-bottom: 1.5rem solid transparent;
+  border-radius: 0.2rem;
 }
 
 /* сетка */
